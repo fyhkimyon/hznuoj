@@ -100,7 +100,7 @@ else $_SESSION['tag'] = "N";
                     <!-- ProblemSet部分 start -->
                     <li <?php
                     $page_name=basename($_SERVER['SCRIPT_NAME']);
-                    if($page_name=="problemset.php" || $page_name=="status.php" || $page_name=="ranklist.php" || $page_name=="problem.php") {
+                    if($page_name=="problemset.php" || $page_name=="status.php" || $page_name=="ranklist.php" || $page_name=="problem.php" || $page_name=="tutorial.php") {
                         echo "class='am-active'";
                     }
                     ?>><a href="/OJ/problemset.php">ProblemSet</a></li>
@@ -115,6 +115,14 @@ else $_SESSION['tag'] = "N";
                     ?>><a href="/OJ/contestset.php">Contests</a></li>
                     <!-- Contests部分 end -->
 
+                    <li <?php
+                    $page_name=basename($_SERVER['SCRIPT_NAME']);
+                    if($page_name=="tutorial.php") {
+                        echo "class='am-active'";
+                    }
+                    ?>><a href="/OJ/tutorial.php">Tutorial</a></li>
+                    <!-- totorial-test部分 end -->
+
                     <li <?php if(basename($_SERVER['SCRIPT_NAME'])=="faqs.php"){echo "class='am-active'";} ?>><a href="/OJ/faqs.php">F.A.Q</a></li>
 
                     <!-- Others Begin -->
@@ -123,7 +131,8 @@ else $_SESSION['tag'] = "N";
                         <ul class="am-dropdown-content">
                             <li><a href="/OJ/c_course.php">Programming Fundamentals</a></li>
                             <li><a href="/OJ/donation.php">Donation</a></li>
-			    <li><a href="/OJ/keywords_page.php">KeyWords</a></li>
+			                <li><a href="/OJ/keywords_page.php">KeyWords</a></li>
+                            <li><a href="/OJ/string_correlation.php">StringCorrelation</a></li>
                             <!-- <li><a href="/forum/">Forum</a></li> -->
                         </ul>
                     </li>
